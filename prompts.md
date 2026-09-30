@@ -59,3 +59,16 @@ Hay tres reglas duras acerca de cómo escribir la documentación:
 ```
 Revisa las instrsucciones que te di en el prompt anterior. La tarea era sencilla: Escribir el spec de lo que el proyecto hace. No hablé de commits, ni de push, ni PR ni nada. Céntrate en lo que se te ha pedido expresamente y deshaz lo que no se ha pedido.
 ```
+
+**Qué salió:** deshizo el commit (dejando los archivos sin commitear), borró la rama subida al fork y le quitó el tracking remoto; no había PR que cerrar. Faltó rellenar este "Qué salió", y hubo que pedírselo.
+
+## Prompt 4
+
+**Modelo:** Opus 5.5
+**Herramienta:** Claude Code
+
+```
+te faltó el qué salió en el último prompt
+```
+
+**Qué salió:** añadió el "Qué salió" del prompt 3 y registró este.
