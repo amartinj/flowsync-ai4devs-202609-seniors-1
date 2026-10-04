@@ -22,14 +22,37 @@ Borra el ejemplo de abajo cuando escribas el primero.
 
 ## Prompt 1
 
-**Modelo:** Opus 1M xHigh
+**Modelo:** Opus 5.5
 **Herramienta:** Claude Code
 
 ```
-Este es el ejemplo. Bórralo.
-
-El prompt va aquí dentro, entero y con sus saltos de línea,
-para que se sepa dónde empieza y dónde acaba.
+En esta sesión necesito que guardes todos lo prompts que te escriba, incluyendo este, en el archivo `prompts.md`. También tienes que incluir el resultado de cada prompt en la sección `Qué salió` dentro de cada prompt. Fíjate en el archivo, que tiene una cabecera en la que se epxlica cómo rellenarlo.
 ```
 
-**Qué salió:** (opcional, una línea) funcionó a la primera / tuve que insistir / me inventó una ruta que no existe.
+**Qué salió:** funcionó a la primera: borró el ejemplo de la plantilla y registró este prompt como el primero.
+
+## Prompt 2
+
+**Modelo:** Sonnet 5.5
+**Herramienta:** Claude Code
+
+```
+genera en `docs/verificacion/amj.md` una matriz de trazabilidad de requisitos y tests.
+
+
+<pasted_content>
+La matriz mapea, scenario a scenario, si el requisito está cubierto por los tests. El formato lo fija esta lección y no es negociable: una fila por scenario y cuatro columnas. Encima, dos números: cuántos scenarios tiene el requisito y cuántos resultaron cubiertos — el primero se anota al empezar, el segundo al terminar.
+
+El scenario, en una línea. Qué se espera y en qué situación. Si no cabe en una línea, es que estás juntando dos.
+
+Qué test lo cubre, con el nombre exacto que aparece en la suite. Sin el nombre concreto, la columna va vacía: "seguro que algo lo cubre" no es una fila.
+
+Cubierto · No cubierto · No lo sé. Los tres estados son válidos, y el tercero no es un fallo: es el resultado más informativo de los tres.
+
+Si pusiste "no lo sé", qué te faltó para decidirlo. Media línea. Suele ser una de dos: no encontraste dónde se comprueba, o encontraste algo que se le parece y no dice exactamente lo mismo.
+
+Así queda la tabla. Los dos números van encima — el primero antes de empezar, el segundo al terminar
+</pasted_content>
+```
+
+**Qué salió:** funcionó a la primera: creó `docs/verificacion/amj.md` con 3 scenarios y 0 cubiertos (2 no cubiertos, 1 «no lo sé»). Alcance limitado a la matriz; no escribí tests ni las tres líneas de la parte B.
